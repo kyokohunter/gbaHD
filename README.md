@@ -63,10 +63,10 @@ amplified. We pick up both PWM signals using the following two
 connections (the test point names can be found on the silkscreen of the
 GBA motherboard).
 
-| GBA Test Point  | FPGA Pin |
-|-----------------|----------|
-| S01             | ARD2 |
-| S02             | ARD3 |
+| GBA Test Point  | GBP Test Point | FPGA Pin |
+|-----------------|----------------|----------|
+| S01             | 30 | ARD2 |
+| S02             | 31 | ARD3 |
 
 ### Clock signal
 The clock crystal has to be removed and a pad of the former crystal is 
