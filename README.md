@@ -37,25 +37,25 @@ column notes the testpoint to be connected to the corresponding FPGA
 pin. The next columns (GBA LCD XX-pin) give additional information where
 this signal is placed on the display ribbon cable.
 
-| **FPGA Pin** | **GBA Testpoint** | GBA LCD 40-pin | GBA LCD 32-Pin | GBA SP 34-Pin |
-|-|-|-|-|-|
-| IO0 | 2 | 26 | 25 | 25 |
-| IO1 | 5 | 23 | 22 | 22 |
-| ARD5 | 6 | 22 | 21 | 21 |
-| IO2 | 7 | 21 | 20 | 20 |
-| ARD6 | 8 | 20 | 19 | 19 |
-| IO3 | 9 | 19 | 18 | 18 |
-| ARD7 | 10 | 17 | 16 | 16 |
-| IO4 | 11 | 16 | 15 | 15 |
-| ARD8 | 12 | 15 | 14 | 14 |
-| IO5 | 13 | 14 | 13 | 13 |
-| ARD9 | 14 | 13 | 12 | 12 |
-| IO6 | 15 | 12 | 11 | 11 |
-| ARD10 | 16 | 11 | 10 | 10 |
-| IO7 | 17 | 10 | 9 | 9 |
-| ARD11 | 18 | 9 | 8 | 8 |
-| ARD13 | 19 | 8 | 7 | 7 |
-| IO9 | 22 | 3 | 2 | 2 |
+| **FPGA Pin** | **GBA Testpoint** | GBA LCD 40-pin | GBA LCD 32-Pin | GBA SP 34-Pin | GBP Test Point |
+|-|-|-|-|-|-|
+| IO0 | 2 | 26 | 25 | 25 | |
+| IO1 | 5 | 23 | 22 | 22 | |
+| ARD5 | 6 | 22 | 21 | 21 | |
+| IO2 | 7 | 21 | 20 | 20 | |
+| ARD6 | 8 | 20 | 19 | 19 | |
+| IO3 | 9 | 19 | 18 | 18 | |
+| ARD7 | 10 | 17 | 16 | 16 | |
+| IO4 | 11 | 16 | 15 | 15 | |
+| ARD8 | 12 | 15 | 14 | 14 | |
+| IO5 | 13 | 14 | 13 | 13 | |
+| ARD9 | 14 | 13 | 12 | 12 | |
+| IO6 | 15 | 12 | 11 | 11 | |
+| ARD10 | 16 | 11 | 10 | 10 | |
+| IO7 | 17 | 10 | 9 | 9 | |
+| ARD11 | 18 | 9 | 8 | 8 | |
+| ARD13 | 19 | 8 | 7 | 7 | |
+| IO9 | 22 | 3 | 2 | 2 | |
 
 ### Audio signals
 The GBA generates a stereo 8 bit audio signals as a PWM which is then
