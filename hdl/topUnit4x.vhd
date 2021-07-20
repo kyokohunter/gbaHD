@@ -106,13 +106,13 @@ begin
   -- Generate Clks.
   mmcm_inst : MMCME2_BASE
     generic map(
-      CLKOUT0_DIVIDE_F => 1.0,
-      CLKOUT1_DIVIDE => 10,
-      CLKOUT2_DIVIDE => 2,
-      CLKOUT3_DIVIDE => 100,
-      CLKFBOUT_MULT_F => 8.375,
-      DIVCLK_DIVIDE => 1,
-      CLKIN1_PERIOD => 10.0
+      CLKOUT0_DIVIDE_F => 1.0, --1.0
+      CLKOUT1_DIVIDE => 10, --10
+      CLKOUT2_DIVIDE => 2, --2
+      CLKOUT3_DIVIDE => 88, --100
+      CLKFBOUT_MULT_F => 37.125, --8.375
+      DIVCLK_DIVIDE => 50, --1
+      CLKIN1_PERIOD => 1.0 -- 10.0
     )
     port map(
       CLKIN1 => clk,

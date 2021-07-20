@@ -140,7 +140,7 @@ signal ecc0, ecc1, ecc2, ecc3, ecc4,
 
 constant vfrontporch : integer := 3;
 constant vsyncpxl : integer := 5;
-constant vbackporch : integer := 20;
+constant vbackporch : integer := 60; --20
 constant hfrontporch : integer := 64;
 constant hsyncpxl : integer := 36;
 constant ystart : integer := -( vsyncpxl + vbackporch );

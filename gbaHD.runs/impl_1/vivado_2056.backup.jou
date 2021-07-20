@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jul 20 18:39:33 2021
+# Process ID: 2056
+# Current directory: C:/Users/Dev Account/Documents/gbaHD/gbaHD.runs/impl_1
+# Command line: vivado.exe -log topUnit4x.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source topUnit4x.tcl -notrace
+# Log file: C:/Users/Dev Account/Documents/gbaHD/gbaHD.runs/impl_1/topUnit4x.vdi
+# Journal file: C:/Users/Dev Account/Documents/gbaHD/gbaHD.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source topUnit4x.tcl -notrace

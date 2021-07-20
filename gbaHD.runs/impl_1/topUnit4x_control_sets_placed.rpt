@@ -1,0 +1,112 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Jul 20 18:56:05 2021
+| Host         : DESKTOP-908F9QD running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file topUnit4x_control_sets_placed.rpt
+| Design       : topUnit4x
+| Device       : xc7s15
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    34 |
+|    Minimum number of control sets                        |    34 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   133 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    34 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |    11 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    10 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              69 |           24 |
+| No           | No                    | Yes                    |               1 |            1 |
+| No           | Yes                   | No                     |             150 |           66 |
+| Yes          | No                    | No                     |             374 |          146 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             145 |           54 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal   |                                              Enable Signal                                              |                                             Set/Reset Signal                                            | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  gbaclk2x_BUFG    |                                                                                                         | hdmi_inst/true_hdmi_output.packet_picker/mmcm_inst                                                      |                1 |              1 |         1.00 |
+|  pxlClk_BUFG      | cap_inst/E[0]                                                                                           | hdmi_inst/true_hdmi_output.packet_picker/mmcm_inst                                                      |                1 |              4 |         4.00 |
+|  pxlClk_BUFG      | clkLock                                                                                                 | hdmi_inst/true_hdmi_output.packet_picker/mmcm_inst                                                      |                3 |              4 |         1.33 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.data_island_period                                                           | hdmi_inst/true_hdmi_output.packet_picker/mmcm_inst                                                      |                5 |              5 |         1.00 |
+|  clock_audio_BUFG |                                                                                                         | hdmi_inst/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/clk_audio_counter[5]_i_1_n_0   |                2 |              6 |         3.00 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/frame_counter[7]_i_2_n_0                                       | hdmi_inst/true_hdmi_output.packet_picker/mmcm_inst                                                      |                2 |              6 |         3.00 |
+|  pxlClk_BUFG      | imgGen_inst/pxlCnt[7]_i_2_n_0                                                                           | hdmi_inst/cy_reg[9]_1[0]                                                                                |                3 |              8 |         2.67 |
+|  pxlClk_BUFG      | cap_inst/cntY[7]_i_1_n_0                                                                                | cap_inst/cntX[8]_i_1_n_0                                                                                |                3 |              8 |         2.67 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_assembler/parity                                                      | hdmi_inst/true_hdmi_output.packet_assembler/parity[4][7]_i_1_n_0                                        |                2 |              8 |         4.00 |
+|  pxlClk_BUFG      | cap_inst/dclkRise                                                                                       | cap_inst/cntX[8]_i_1_n_0                                                                                |                3 |              9 |         3.00 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_sample_word_buffer[1][2][0][17]_i_1_n_0                  |                                                                                                         |                2 |             10 |         5.00 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_sample_word_buffer[0][3][0][17]_i_1_n_0                  |                                                                                                         |                2 |             10 |         5.00 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_sample_word_buffer[0][1][0][17]_i_1_n_0                  |                                                                                                         |                4 |             10 |         2.50 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_sample_word_buffer[0][2][0][17]_i_1_n_0                  |                                                                                                         |                2 |             10 |         5.00 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_sample_word_buffer[8]                                    |                                                                                                         |                4 |             10 |         2.50 |
+|  pxlClk_BUFG      | hdmi_inst/tmds_gen[0].tmds_channel/tmds[9]_i_2__0_n_0                                                   | hdmi_inst/tmds_gen[0].tmds_channel/tmds[9]_i_1__1_n_0                                                   |                4 |             10 |         2.50 |
+|  pxlClk_BUFG      | imgGen_inst/skipTo_reg_inv_0[0]                                                                         | hdmi_inst/true_hdmi_output.packet_picker/mmcm_inst                                                      |                5 |             10 |         2.00 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_sample_word_buffer[0][0][0][17]_i_1_n_0                  |                                                                                                         |                4 |             10 |         2.50 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_sample_word_buffer[1][1][0][17]_i_1_n_0                  |                                                                                                         |                3 |             10 |         3.33 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_sample_word_buffer[1][0][0][17]_i_1_n_0                  |                                                                                                         |                5 |             10 |         2.00 |
+|  pxlClk_BUFG      | imgGen_inst/E[0]                                                                                        | hdmi_inst/true_hdmi_output.packet_picker/mmcm_inst                                                      |                4 |             11 |         2.75 |
+|  pxlClk_BUFG      |                                                                                                         | hdmi_inst/tmds_gen[0].tmds_channel/SR[0]                                                                |                4 |             12 |         3.00 |
+|  pxlClk_BUFG      | cap_inst/sel                                                                                            | cap_inst/syncCnt[0]_i_1_n_0                                                                             |                4 |             15 |         3.75 |
+|  pxlClk_BUFG      | cap_inst/dclkRise                                                                                       | hdmi_inst/true_hdmi_output.packet_picker/mmcm_inst                                                      |                6 |             15 |         2.50 |
+|  pxlClk_BUFG      |                                                                                                         | hdmi_inst/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/clk_audio_counter_wrap_i_1_n_0 |                5 |             17 |         3.40 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/clk_audio_counter_wrap_i_1_n_0 |                                                                                                         |                6 |             18 |         3.00 |
+|  pxlClk_BUFG      | hdmi_inst/tmds_gen[2].tmds_channel/E[0]                                                                 |                                                                                                         |               12 |             20 |         1.67 |
+|  clock_audio_BUFG |                                                                                                         |                                                                                                         |                8 |             28 |         3.50 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_assembler/parity[0][7]_i_1_n_0                                        | hdmi_inst/true_hdmi_output.packet_assembler/parity[4][7]_i_1_n_0                                        |                9 |             32 |         3.56 |
+|  pxlClk_BUFG      | hdmi_inst/true_hdmi_output.packet_picker/audio_clock_regeneration_packet/E[0]                           |                                                                                                         |                7 |             40 |         5.71 |
+|  pxlClk_BUFG      |                                                                                                         |                                                                                                         |               16 |             41 |         2.56 |
+|  pxlClk_BUFG      | clkLock                                                                                                 |                                                                                                         |               28 |             72 |         2.57 |
+|  pxlClk_BUFG      |                                                                                                         | hdmi_inst/true_hdmi_output.packet_picker/mmcm_inst                                                      |               55 |            115 |         2.09 |
+|  pxlClk_BUFG      | lineCache_inst/prevLineCurPxl[0][7]_i_1_n_0                                                             |                                                                                                         |               67 |            144 |         2.15 |
++-------------------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
